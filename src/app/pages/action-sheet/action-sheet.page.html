@@ -1,0 +1,18 @@
+<app-header titulo="action sheet"></app-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let c of componentes"
+    detail="true"
+    [routerLink]="c.redirectTo">
+    <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon> {{c.name}} </ion-item>
+  </ion-list>
+
+  <ion-button (click)="onClick()" expand="block" >
+    Mostrar Action Sheet
+  </ion-button>
+
+  </ion-content>
+
+
