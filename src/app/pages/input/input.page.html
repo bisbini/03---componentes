@@ -1,0 +1,112 @@
+<app-header titulo="Input Forms"> </app-header> 
+
+<!-- Conviene poner todo dentro de un ionlist ya que al abrir el teclado lo desplazara hacia arriba y me permitira un mejor scroll, si no estuviera dentro de un ilist no lo haria -->
+
+<ion-content class="ion-padding">
+
+  <ion-list>
+    
+    <ion-list-header>
+      <ion-label>Input Normal</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Ingrese su Nombre:</ion-label>
+      <ion-input type="text" placeholder="Escriba aqui..." >  </ion-input>
+    </ion-item>
+
+
+
+    <ion-list-header>
+      <ion-label>Input Precargado</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Ingrese su Nombre:</ion-label>
+      <ion-input type="text" placeholder="Escriba aqui..." [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+
+    <!-- ngModel para referenciar variables y traerlas a pantalla, en este caso si yo modifico esta variable en la app, se modifica en el programa -->
+
+    <ion-list-header>
+      <ion-label>Otro tipo de Input</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label position="stacked">Ingrese su Apellido:</ion-label>
+      <ion-input placeholder="Enter text"></ion-input>
+    </ion-item>
+
+    <ion-list-header>
+      <ion-label>Input Socio</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Numero de socio:</ion-label>
+      <ion-input type="number" placeholder="Escriba aqui..." [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+
+
+    <ion-list-header>
+      <ion-label>Input Contraseña</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Ingrese su Contraseña:</ion-label>
+      <ion-input type="password" placeholder="Escriba aqui..." [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+
+  <form #formulario="ngForm" (ngSubmit)="onSubmit(formulario)"> 
+    <ion-list-header>
+      <ion-label>Formulario con Inputs: {{formulario.valid}} </ion-label>
+      
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <!-- Necesito asociar mi input a un formulario -->
+      <ion-input type="email" 
+                placeholder="Email..."
+                name="email"
+                [(ngModel)]="usuario.email" 
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Awesome Label</ion-label>
+
+      <ion-input type="password" 
+                placeholder="Contraseña"
+                [(ngModel)]="usuario.password"
+                required
+                name="password"
+
+      ></ion-input>
+    </ion-item>
+
+    <ion-button [disabled]="formulario.invalid"
+    type="submit" expand="block" fill="clear" shape="round">
+      Submit
+    </ion-button>
+
+
+
+
+
+
+
+  </form>
+
+
+
+
+
+
+
+
+</ion-content>

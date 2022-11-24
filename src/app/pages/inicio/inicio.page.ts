@@ -1,12 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Componente{
-  icon: string;
-  name: string;
-  redirectTo: string;
-}
-
-
+import { MenuController } from '@ionic/angular';
+import { Componente } from 'src/app/interfases/interfases';
+import { Observable } from 'rxjs';
+import { DataService } from '../../services/data.service';
 
 
 
@@ -17,40 +13,19 @@ interface Componente{
 })
 export class InicioPage implements OnInit {
 
-  componentes: Componente[] = [
-    {
-    icon: 'arrow-redo-circle-outline',
-    name: 'Action Sheet',
-    redirectTo: '/action-sheet'
-    },
-    {
-      icon: 'arrow-redo-circle-outline',
-      name: 'Alerts',
-      redirectTo: '/alert'
-      },
-      {
-        icon: 'arrow-redo-circle-outline',
-        name: 'Avatar',
-        redirectTo: '/avatar'
-        },
-        {
-          icon: 'arrow-redo-circle-outline',
-          name: 'Botones',
-          redirectTo: '/button'
-          },
-        {
-            icon: 'arrow-redo-circle-outline',
-            name: 'Cards',
-            redirectTo: '/card'
-          }
-  ];
+  componentes:Observable<Componente[]>;
   
   
   
-  
-  constructor() { }
+  constructor( private menuCtrl: MenuController,
+    private DataService:DataService) { }
 
   ngOnInit() {
+    this.componentes = this.DataService.getMenuOpts();
+  }
+
+  mostrarMenu(){
+    this.menuCtrl.open("first");
   }
 
 }

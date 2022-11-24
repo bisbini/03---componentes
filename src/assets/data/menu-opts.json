@@ -1,0 +1,73 @@
+[
+    {
+    "icon": "arrow-redo-circle-outline",
+    "name": "Action Sheet",
+    "redirectTo": "/action-sheet"
+    },
+    {
+      "icon": "alarm-outline",
+      "name": "Alerts",
+      "redirectTo": "/alert"
+      },
+      {
+        "icon": "person-outline",
+        "name": "Avatar",
+        "redirectTo": "/avatar"
+        },
+        {
+          "icon": "radio-button-on-outline",
+          "name": "Botones",
+          "redirectTo": "/button"
+          },
+        {
+            "icon": "image-outline",
+            "name": "Cards",
+            "redirectTo": "/card"
+          },
+          {
+            "icon": "checkmark-circle-outline",
+            "name": "Checkbox",
+            "redirectTo": "/check"
+          },
+          {
+            "icon": "calendar-outline",
+            "name": "DateTime",
+            "redirectTo": "/datetime"
+          },
+          {
+            "icon": "add-circle-outline",
+            "name": "Fab",
+            "redirectTo": "/fab"
+          },
+          {
+            "icon": "infinite-outline",
+            "name": "Infinite",
+            "redirectTo": "/infinite"
+          },
+          {
+            "icon": "hammer-outline",
+            "name": "Input",
+            "redirectTo": "/input"
+          },
+          {
+            "icon": "list-outline",
+            "name": "Lista",
+            "redirectTo": "/lista"
+          },
+          {
+            "icon": "reorder-three-outline",
+            "name": "List - reorder",
+            "redirectTo": "/list-reorder"
+          },
+          {
+            "icon": "arrow-down-circle-outline",
+            "name": "Refresher",
+            "redirectTo": "/refresher"
+          },
+          {
+            "icon": "search-outline",
+            "name": "Searchbar",
+            "redirectTo": "/searchbar"
+          }
+  
+  ]
